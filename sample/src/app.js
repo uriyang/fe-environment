@@ -1,4 +1,4 @@
-import "./app.css";
+// import "./app.css";
 import cat from "./cat.jpg";
 
 document.addEventListener("DOMContentLoaded", () => {

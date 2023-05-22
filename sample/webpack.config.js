@@ -16,11 +16,12 @@ module.exports = {
         use: ["style-loader", "css-loader"],
       },
       {
-        test: /\.png|jpg$/,
-        loader: "file-loader",
+        test: /\.(png|jpg|git|svg)$/,
+        loader: "url-loader",
         options: {
           outputPath: "./img/",
           name: "[name].[ext]?[hash]",
+          limit: 20000, // 20kb
         },
       },
     ],

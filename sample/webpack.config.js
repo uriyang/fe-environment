@@ -12,8 +12,8 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js$/,
-        use: ["./my-webpack-loader.js"],
+        test: /\.css$/,
+        use: ["style-loader", "css-loader"],
       },
     ],
   },

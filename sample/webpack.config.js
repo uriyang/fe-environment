@@ -28,5 +28,6 @@ module.exports = {
         Author: ${exec("git config user.name")}
       `,
     }),
+    new webpack.DefinePlugin({}),
   ],
 };

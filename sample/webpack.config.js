@@ -40,6 +40,13 @@ module.exports = {
         // 템플릿에 주입할 파라매터 변수 지정
         env: process.env.NODE_ENV === "development" ? "(개발용)" : "(테스트)",
       },
+      minify:
+        process.env.NODE_ENV === "production"
+          ? {
+              collapseWhitespace: true, // 빈칸 제거
+              removeComments: true, // 주석 제거
+            }
+          : false,
     }),
   ],
 };

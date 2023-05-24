@@ -28,6 +28,11 @@ module.exports = {
         Author: ${exec("git config user.name")}
       `,
     }),
-    new webpack.DefinePlugin({}),
+    new webpack.DefinePlugin({
+      VERSION: JSON.stringify("v.1.2.3"),
+      PRODUCTION: JSON.stringify(false),
+      MAX_COUNT: JSON.stringify(999),
+      "api.domain": JSON.stringify("http://dev.api.domain.com"),
+    }),
   ],
 };

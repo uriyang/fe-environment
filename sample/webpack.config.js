@@ -2,6 +2,7 @@ const { ChildProcess } = require("child_process");
 const path = require("path");
 const webpack = require("webpack");
 const exec = require("child_process").execSync;
+const HtmlWebpack = require("html-webpack-plugin");
 
 module.exports = {
   mode: "development",
@@ -33,6 +34,9 @@ module.exports = {
       PRODUCTION: JSON.stringify(false),
       MAX_COUNT: JSON.stringify(999),
       "api.domain": JSON.stringify("http://dev.api.domain.com"),
+    }),
+    new HtmlWebpack({
+      template: "./src/index.html",
     }),
   ],
 };

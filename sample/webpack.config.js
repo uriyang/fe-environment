@@ -1,4 +1,3 @@
-const { ChildProcess } = require("child_process");
 const path = require("path");
 const webpack = require("webpack");
 const exec = require("child_process").execSync;
@@ -37,6 +36,10 @@ module.exports = {
     }),
     new HtmlWebpack({
       template: "./src/index.html",
+      templateParameters: {
+        // 템플릿에 주입할 파라매터 변수 지정
+        env: process.env.NODE_ENV === "development" ? "(개발용)" : "(테스트)",
+      },
     }),
   ],
 };

@@ -23,6 +23,7 @@
     "@babel/cli": "^7.21.5",
     "@babel/core": "^7.21.8",
     "css-loader": "^6.7.4",
+    "eslint": "^8.42.0",
     "html-webpack-plugin": "^5.5.1",
     "style-loader": "^3.3.3"
   }
